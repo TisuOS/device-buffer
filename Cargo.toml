@@ -9,6 +9,6 @@ edition = "2018"
 tisu-sync = { path = "../tisu-sync" }
 tisu-driver = { path = "../tisu-driver" }
 tisu-memory = { path = "../tisu-memory" }
-# tisu-memory = { git = "https://github.com/TisuOS/tisu-memory" }
-# tisu-sync = { git = "https://github.com/TisuOS/tisu-sync" }
-# tisu-driver = { git = "https://github.com/TisuOS/tisu-driver" }
+# tisu-memory = { git = "https://github.com/TisuOS/tisu-memory", tag = "v2.0" }
+# tisu-sync = { git = "https://github.com/TisuOS/tisu-sync", tag = "v1.0" }
+# tisu-driver = { git = "https://github.com/TisuOS/tisu-driver", tag = "v2.0" }
