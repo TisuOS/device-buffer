@@ -11,4 +11,4 @@ edition = "2018"
 # tisu-memory = { path = "../tisu-memory" }
 tisu-memory = { git = "https://github.com/TisuOS/tisu-memory", tag = "v3.0" }
 tisu-sync = { git = "https://github.com/TisuOS/tisu-sync", tag = "v2.0" }
-tisu-driver = { git = "https://github.com/TisuOS/tisu-driver", tag = "v2.0" }
+tisu-driver = { git = "https://github.com/TisuOS/tisu-driver", tag = "v3.0" }
