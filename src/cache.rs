@@ -5,7 +5,6 @@ use alloc::{collections::BTreeMap, vec::Vec};
 use tisu_driver::BlockDriver;
 use tisu_memory::MemoryOp;
 
-#[allow(dead_code)]
 pub struct Cache {
     cache_size : usize,
     buffer_size : usize,

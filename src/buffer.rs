@@ -3,6 +3,9 @@ use core::{cmp::min, usize};
 use tisu_driver::BlockDriver;
 use tisu_sync::{Bool, ReadWriteMutex};
 
+/// ## 磁盘缓冲
+/// 当前缓冲池使用的是普通自旋锁，没有禁止中断的功能，存在死锁风险
+/// 应当在后续中将读写锁替换成 tisu-sync, tag=v2.0 的 lock_no_int 系列
 pub struct Buffer {
     pub use_cnt : usize,
     pub offset : usize,
@@ -21,7 +24,7 @@ impl Buffer {
     )->Self {
         driver.sync_read(offset, size, data).unwrap();
         Self {
-            mutex: ReadWriteMutex::new(),
+            mutex: ReadWriteMutex::new(true),
             use_cnt: 0,
             offset,
             size,
